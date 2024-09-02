@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             </span>`;
     }else updateTodos(todos);
 });
+
 todoForm.addEventListener("submit",addNewTodo);
 
 filterInput.addEventListener("change",(e) => {
@@ -39,6 +40,7 @@ filtersInput.addEventListener("change",(e) => {
     filterTodos();
     filtersTodos();
 });
+
 closeModalBtn.addEventListener("click",closeModal)
 applyEdit.addEventListener("click", changeTodoTitle)
 form.addEventListener("submit", changeTodoTitle)
@@ -184,6 +186,9 @@ function checkTodo(e){
     localStorage.setItem("Todo", JSON.stringify(Todos));
     filterTodos();
 }
+
+/*   Dark Mode   */
+
 const darkModeBtn = document.querySelector(".dark__toggle")
 darkModeBtn.addEventListener("click",darkMode)
 
@@ -196,6 +201,9 @@ function darkMode(){
         darkModeBtn.innerHTML = `<i class="fa fa-sun-o" aria-hidden="true"></i>`
     }
 }
+
+/*   Local Storage   */
+
 function getTodos(){
     const Todo = JSON.parse(localStorage.getItem("Todo")) || [];
     return Todo;

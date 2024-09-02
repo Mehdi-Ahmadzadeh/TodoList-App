@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles.css">
+    <link rel="stylesheet" href="/src/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Todo List</h1>
+    </header>
+    <section>
+        <div class="backdrop hidden">
+            <div class="modal">
+              <div class="modal__header">
+                <p>Edit Title</p>
+                <button class="close-modal">❌</button>
+              </div>
+              <div class="edit__section">
+                  <form action="" class="form">
+                      <input type="text" class="edit__input">
+                  </form>
+              </div>
+              <div class="edit__btns">
+                  <button class="cancel__btn btn">
+                      Cancel
+                  </button>
+                <button class="apply__btn btn">
+                    Apply
+                </button>
+              </div>
+            </div>
+        </div>
+        <div class="filter__todos">
+            <form class="todo__form">
+                <input type="text" class="input__todos" placeholder="Add new task">
+                <button class="add__btn" type="submit">
+                    Add
+                </button>
+            </form>
+            <select class="filter" name="" id="">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="incompleted">Incompleted</option>
+            </select>
+            <select class="filters" name="" id="">
+                <option value="earliest">Earliest</option>
+                <option value="latest">Latest</option>
+            </select>
+            <form action="">
+                <input type="text" class="search__todos" name="" id="" placeholder="search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </form>
+            <button class="dark__toggle">
+                <i class="fa fa-sun-o" aria-hidden="true"></i>
+            </button>
+        </div>
+        <section class="todos__container">
+            <span class="todo__empty">
+                <img src="/images/Detective-check-footprint 1.svg" alt="...">
+            </span>
+        </section>
+    </section>
+    <script src="/src/script.js"></script>
+</body>
+</html>
